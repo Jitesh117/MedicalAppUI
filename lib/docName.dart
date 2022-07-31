@@ -6,12 +6,14 @@ class DocName extends StatelessWidget {
     required this.imagePath,
     required this.star,
     required this.name,
+    required this.role,
     required this.exp,
   }) : super(key: key);
   final String imagePath;
   final String star;
   final String name;
   final String exp;
+  final String role;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -61,7 +63,7 @@ class DocName extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Text('Therapist ' + exp)
+            Text(role + ', ' + exp + ' yrs')
           ],
         ),
       ),
